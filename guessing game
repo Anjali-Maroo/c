@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+    int r,n,g,i;
+    srand(time(NULL));
+    n=0;
+    printf("Welcome to guessing game!!!\n");
+    r = rand()%100 + 1;
+    do{
+        printf("Guess any number between 1 to 100: ");
+        scanf("%d",&g);
+        n++;
+        if(g<r){
+            printf("Guess a larger number!\n");
+        } else if(g>r){
+            printf("Guess a smaller number!\n ");
+        } else{
+            printf("Congratulations!!!\nYou have successfully guess the correct number in %d chances",n);
+        }
+    }while(g!=r);
+    printf("\nThank You so much for your time!!\nDeveloped by Anjali Maroo");
+    return 0; 
+}
